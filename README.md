@@ -13,7 +13,7 @@ Dabei wäre es nützlich, wenn er jeweils die Commits in allen Repos über die Z
 Es sollen 2 Skripts erstellt werden. Das erste Skript soll alle GIT-Repos mit GIT-Kommandos klonen und in einen Verzeichnis ablegen.
 Das zweite Skript soll von allen GIT-Repos in diesem Verzeichnis alle Commits auslesen und in einem File speichern.
 Ihr Lehrer hat dann ein Skript, das diese graphisch dastellt. Das Resultat sieht dann ungefähr so aus:
-    ![Sample Output](images/sample_output.png) 
+    ![Sample Output](images/Script2.drawio.png.png) 
 
 ### Skript 1: [git_clone_update_repos.bash](bin/git_clone_update_repos.bash)
 

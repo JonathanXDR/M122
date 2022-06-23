@@ -11,6 +11,7 @@ TODO: schreiben sie wie die Skripte aufgerufen werden sollen (d.h. welche Parame
 
 ### Ablauf der Automation
 
+ ![Script 2](../images/Script2.drawio.png)
 TODO: Hier kommt ihr UML-Activity Diagramm
 
 ### Konfigurationsdateien
