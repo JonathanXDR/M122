@@ -3,6 +3,7 @@
 [[_TOC_]]
 
 ## Lösungsdesign
+
 Anhand der Analyse wurde folgendes Lösungsdesign entworfen.
 
 ### Aufruf der Skripte
@@ -11,7 +12,8 @@ TODO: schreiben sie wie die Skripte aufgerufen werden sollen (d.h. welche Parame
 
 ### Ablauf der Automation
 
- ![Script 2](../images/Script2.drawio.png)
+![Script 1](../images/script1_solution_design.drawio.png)
+![Script 2](../images/script2_solution_design.drawio.png)
 TODO: Hier kommt ihr UML-Activity Diagramm
 
 ### Konfigurationsdateien
