@@ -1,5 +1,12 @@
 #!/bin/bash
 
+echo -e "\n"
+echo "------------------------------"
+echo "####### Script started #######"
+echo "------------------------------"
+echo -e "\n"
+
+
 #Vorbereitungen
 ##sudo install git
 cwd=`pwd`
@@ -30,11 +37,13 @@ cd "$cwd"
   fi
 done
 
+echo -e "\n"
+
 if [ -f /tmp/nonrepolist.$$ ] ; then
 echo "Non Repo Directorys:"
 cat /tmp/nonrepolist.$$
 fi
-
+echo -e "\n \n"
 
 
 #for i in "$nonRepolist";do
