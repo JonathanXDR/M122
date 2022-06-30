@@ -30,9 +30,10 @@ cd "$cwd"
   fi
 done
 
+if [ -f /tmp/nonrepolist.$$ ] ; then
 echo "Non Repo Directorys:"
-echo -e $(cat /tmp/nonrepolist.$$)
-
+cat /tmp/nonrepolist.$$
+fi
 
 
 
@@ -62,3 +63,4 @@ done
 #output nonRepo Directorys
 
 ## end
+
