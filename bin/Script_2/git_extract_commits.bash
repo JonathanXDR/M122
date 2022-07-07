@@ -17,6 +17,8 @@ twd="$1"
 outputFile="$2"
 
 
+  echo "Zielverzeichnis,Datum,Commit-Hash,Author"> "${cwd}/${outputFile}/OutputFile$$.csv"
+
 # Do with every Directory and File in the specified directory
 for f in $twd/*; do
 
@@ -28,20 +30,15 @@ for f in $twd/*; do
       #Directory is repo
       echo "repository found."
 
-      git log > "${cwd}/${outputFile}/Test$$"
+      repoName=${f#$twd/}
 
-
-      cd "$cwd"
-
-
+     #echo "$f" > "${cwd}/${outputFile}/Test$$.csv"
+    # git log --pretty=format:"%H,%as,%an"> "${cwd}/${outputFile}/OutputFile$$.csv"
+  
     
-
-
-
-
-
-
-
+   if !  git log --pretty=format:"$repoName,%cd,%H,%an" --date=format:'%Y%m%d' >> "${cwd}/${outputFile}/OutputFile$$.csv"; then
+   echo "Error while getting the log of $f"
+   fi
 
     else
       #directory is not a repo
