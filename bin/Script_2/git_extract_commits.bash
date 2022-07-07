@@ -6,53 +6,68 @@ echo "####### Script started #######"
 echo "------------------------------"
 echo -e "\n"
 
-
 #Vorbereitungen
 ##sudo install git
-cwd=`pwd`
-#Read RepoDirectory and output File
+cwd=$(pwd)
+
+#Read RepoDirectory
 twd="$1"
-nonRepolist=()
 
-for f in $1/*; do
-if [ -d "$f" ]; then
-
-cd "$f"
+# Read output File
+outputFile="$2"
 
 
-if [ -d .git ]; then
-#Directory is repo
-    echo "repository here.";
+# Do with every Directory and File in the specified directory
+for f in $twd/*; do
+
+  if [ -d "$f" ]; then
+
+    cd "$f"
+
+    if [ -d .git ]; then
+      #Directory is repo
+      echo "repository found."
+
+      git log > "${cwd}/${outputFile}/Test$$"
+
+
+      cd "$cwd"
+
+
+    
 
 
 
-else
-#directory is not a repo
-    #nonRepolist+="$f \n"
-    echo "$f" >> "/tmp/nonrepolist.$$"
-fi
 
 
-cd "$cwd"
+
+
+
+    else
+      #directory is not a repo
+      
+      #Write non Directory items in File
+      echo "$f" >>"/tmp/nonrepolist.$$"
+    fi
+
+    cd "$cwd"
   fi
+
 done
 
 echo -e "\n"
 
-if [ -f /tmp/nonrepolist.$$ ] ; then
-echo "Non Repo Directorys:"
-cat /tmp/nonrepolist.$$
+if [ -f /tmp/nonrepolist.$$ ]; then
+  echo "Non Repo Directorys:"
+  cat /tmp/nonrepolist.$$
 fi
 echo -e "\n \n"
-
 
 #for i in "$nonRepolist";do
 
 #echo "$i is not a repo"
 
 #done
-
-
 
 # wenn Subdirectoys
 #no -> End
@@ -72,4 +87,3 @@ done
 #output nonRepo Directorys
 
 ## end
-
