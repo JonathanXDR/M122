@@ -8,18 +8,48 @@ echo -e "\n"
 
 #Vorbereitungen
 ##sudo install git
+
+# Save Current Work Directory
 cwd=$(pwd)
 
-#Read RepoDirectory
+
+# Save directory-path with repositories
 twd="$1"
 
-# Read output File
+# Check if twd is empty
+if [ "$twd" = "" ]; then
+  echo "Path to repositories is missing: $twd"
+  exit 1
+fi
+
+# Check if twd exists
+if [ ! -d "$twd" ]; then
+  echo "Path does not exist: $twd"
+  exit 1
+fi
+
+
+# Save output-file-path
 outputFile="$2"
 
+# Check if outputFile is empty
+if [ "$outputFile" = "" ]; then
+  echo "Path to output file is missing: $twd"
+  exit 1
+fi
 
-  echo "Zielverzeichnis,Datum,Commit-Hash,Author"> "${cwd}/${outputFile}/OutputFile$$.csv"
+# Check if outputFile exists
+if [ ! -d "$outputFile" ]; then
+  echo "Path does not exist: $outputFile"
+  exit 1
+fi
 
-# Do with every Directory and File in the specified directory
+# Add headline to output-file
+echo "Zielverzeichnis,Datum,Commit-Hash,Author" >"${cwd}/${outputFile}/OutputFile$$.csv"
+
+echo "Repo Directorys:"
+
+# Go trough each element in directory
 for f in $twd/*; do
 
   if [ -d "$f" ]; then
@@ -28,23 +58,17 @@ for f in $twd/*; do
 
     if [ -d .git ]; then
       #Directory is repo
-      echo "repository found."
 
       repoName=${f#$twd/}
+      echo "$repoName"
 
-     #echo "$f" > "${cwd}/${outputFile}/Test$$.csv"
-    # git log --pretty=format:"%H,%as,%an"> "${cwd}/${outputFile}/OutputFile$$.csv"
-  
-    
-   if !  git log --pretty=format:"$repoName,%cd,%H,%an" --date=format:'%Y%m%d' >> "${cwd}/${outputFile}/OutputFile$$.csv"; then
-   echo "Error while getting the log of $f"
-   fi
+      if ! git log --pretty=format:"$repoName,%cd,%H,%an" --date=format:'%Y%m%d' >>"${cwd}/${outputFile}/OutputFile$$.csv"; then
+        echo "Error while getting the log of $f"
+      fi
 
     else
-      #directory is not a repo
-      
-      #Write non Directory items in File
-      echo "$f" >>"/tmp/nonrepolist.$$"
+
+      echo "${f#$twd/}" >>"/tmp/nonrepolist.$$"
     fi
 
     cd "$cwd"
@@ -60,27 +84,6 @@ if [ -f /tmp/nonrepolist.$$ ]; then
 fi
 echo -e "\n \n"
 
-#for i in "$nonRepolist";do
-
-#echo "$i is not a repo"
-
-#done
-
-# wenn Subdirectoys
-#no -> End
-
-#yes -> Continue
-
-# For each Directory
 for f in $subdirectories; do
   echo "File -> $f"
 done
-## if Directory is Repo
-### no -> Save Folder Name
-### yes -> Add Commitmessages to output File
-
-#
-
-#output nonRepo Directorys
-
-## end
