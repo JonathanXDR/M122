@@ -15,7 +15,6 @@ Er installiert Git und macht dabei die Scripte funktionstüchtig.
 ### Konfiguration
 -- Keine -- 
 
-....
 
 ## Bediensanleitung Benutzer
 
