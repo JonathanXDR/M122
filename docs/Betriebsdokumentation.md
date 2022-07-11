@@ -1,6 +1,5 @@
 # Betriebsdokumentation
-[[_TOC_]]
-## Einführungstext 
+## Einführung 
 
 Mithilfe der Scripte kann man sich das Laben mit Git erleichtern. Sie automatisieren manuelle Aufgaben automatisch und man spart sich so Zeit.
 ## Installationsanleitung für Administratoren
