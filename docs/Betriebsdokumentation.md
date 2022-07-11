@@ -12,10 +12,6 @@ sudo apt install git
 ```
 Er installiert Git und macht dabei die Scripte funktionstüchtig.
 
-### Konfiguration
--- Keine -- 
-
-
 ## Bediensanleitung Benutzer
 
 TODO: Erzeugen der Input-Files beschreiben, falls noetig
