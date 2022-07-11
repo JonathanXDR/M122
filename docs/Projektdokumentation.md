@@ -12,11 +12,17 @@ TODO: schreiben sie wie die Skripte aufgerufen werden sollen (d.h. welche Parame
 
 ### Ablauf der Automation
 
-#### Skript 1: [git_clone_update_repos.bash](../bin/Script_1/git_clone_update_repos.bash)
+# Skript 1: [git_clone_update_repos.bash](../bin/Script_1/git_clone_update_repos.bash)
 
 ![Script 1](../images/script1_solution_design.drawio.png)
 
-#### Skript 2: [git_extract_commits.bash](../bin/Script_2/git_extract_commits.bash)
+## Vorbereitungen
+
+## Parameter
+
+## Ablauf
+
+# Skript 2: [git_extract_commits.bash](../bin/Script_2/git_extract_commits.bash)
 
 ![Script 2](../images/script2_solution_design.drawio.png)
 
