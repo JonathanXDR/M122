@@ -20,14 +20,14 @@ TODO: schreiben sie wie die Skripte aufgerufen werden sollen (d.h. welche Parame
 
 ![Script 2](../images/script2_solution_design.drawio.png)
 
-### Vorbereitungen
+## Vorbereitungen
 Damit das Programm funktionieren kann muss folgender Befehl ausgeführt werden:
 ```
 sodo apt install git
 ```
 Dabei wird git heruntergeladen. Es wird benötigt um die Commit Messages auszulesen.
 
-### Parameter
+## Parameter
 
 #### Parameter 1:
 Es muss angegeben welches Directory nach repos durchsucht werden soll. Dabei kann einfach der Pfad zu dem Directroy angegeben werden.
