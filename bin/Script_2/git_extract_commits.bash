@@ -92,6 +92,3 @@ if [ -f /tmp/nonrepolist.$$ ]; then
 fi
 echo -e "\n \n"
 
-for f in $subdirectories; do
-  echo "File -> $f"
-done
