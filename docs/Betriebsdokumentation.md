@@ -2,13 +2,16 @@
 [[_TOC_]]
 ## Einführungstext 
 
-TODO: In 2-3 Sätzen beschreiben was die Skripte grundsaetzlich tun.
-
+Mithilfe der Scripte kann man sich das Laben mit Git erleichtern. Sie automatisieren manuelle Aufgaben automatisch und man spart sich so Zeit.
 ## Installationsanleitung für Administratoren
 
 ### Installation
 
-TODO: Wie ist das skript zu installieren. (z.B. apt-get install ... oder tar xvf .... oder ...)
+Bevor die Scripte ausführbar sind muss folgender Befehl ausgeführt werden:
+```
+sudo apt install git
+```
+Er installiert Git und macht dabei die Scripte funktionstüchtig.
 
 ### Konfiguration
 
