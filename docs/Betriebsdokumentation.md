@@ -1,32 +1,31 @@
 # Betriebsdokumentation
-[[_TOC_]]
-## Einführungstext 
 
-TODO: In 2-3 Sätzen beschreiben was die Skripte grundsaetzlich tun.
+## Einführung
+
+Mithilfe der Scripte kann man sich das Laben mit Git erleichtern. Sie automatisieren manuelle Aufgaben automatisch und man spart sich so Zeit.
 
 ## Installationsanleitung für Administratoren
 
 ### Installation
 
-TODO: Wie ist das skript zu installieren. (z.B. apt-get install ... oder tar xvf .... oder ...)
+Bevor die Scripte ausführbar sind muss folgender Befehl ausgeführt werden:
 
-### Konfiguration
+```
+sudo apt install git
+```
 
-TODO: Beschreibung der Konfigurationsfiles (Beispiel-Files erstellen im Repo)
-
-TODO: Wie ist ein allfaelliger Cronjob einzurichten
-
-TODO: Wie sind User-Home-Templates einzurichten
-
-....
+Er installiert Git und macht dabei die Scripte funktionstüchtig.
 
 ## Bediensanleitung Benutzer
 
-TODO: Erzeugen der Input-Files beschreiben, falls noetig
+### Script 1
 
-TODO: beschreiben des Scriptaufruf
+Input file nach diesem Schema:
+`<GIT-Url> <Verzeichnisname>`
 
-TODO: beschreiben der erzeugt files (falls solche erzeugt werden)
+### Script 2
 
-TODO: Lokation von logfiles und bekannte Fehlermeldungen beschreiben.
+Das Script musss mit zwei Parameter ausgeführt werden.
+Beide Parameter müssen pfade zu Directories sein.
 
+`./git_extract_commits.bash <SourceDirectory> <TargetDirectory>`

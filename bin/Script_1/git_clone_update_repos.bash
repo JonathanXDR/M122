@@ -7,7 +7,12 @@ BASENAME=$(basename $0)  # Set the script name (without path to it)
 TMPDIR=/tmp/$BASENAME.$$ # Set a temporary directory if needed
 ETCDIR=$BINDIR/../etc    # $ETCDIR is the config directory
 
-# Read input file, which contains the git urls and the directories to clone to in the format:
+RED='\033[1;31m'
+GREEN='\033[1;32m'
+YELLOW='\033[1;33m'
+NC='\033[0m' # No Color
+
+# read input file, which contains the git urls and the directories to clone to in the format:
 # <git url> <directory to clone to>
 
 input_file=$1
@@ -15,25 +20,33 @@ base_dir=$2
 
 # if parameters are not set, exit
 if [ -z "$input_file" ] || [ -z "$base_dir" ]; then
-  echo "Error: parameters are not set"
-  echo "Usage: $BASENAME <input file> <target directory>"
+  printf "${RED}Error: parameters are not set${NC}\n"
+  printf "${YELLOW}Usage: $BASENAME <input file> <target directory>${NC}\n"
   exit 1
 fi
 
-# Base directory exists? If not, create it.
-if [ ! -d $base_dir ]; then
-  mkdir -p $base_dir
+# base directory exists? If not, ask for creation
+if [ ! -d "$base_dir" ]; then
+  printf "${RED}Error: base directory $base_dir does not exist${NC}\n"
+  echo "Do you want to create it? (y/n)"
+  read create_dir
+  if [ "$create_dir" == "y" ] || [ "$create_dir" == "Y" ] || [ "$create_dir" == "yes" ] || [ "$create_dir" == "Yes" ]; then
+    mkdir -p $base_dir
+    printf "${GREEN}Info: Successfully created directory${NC}\n"
+  else
+    exit 1
+  fi
 fi
 
 # check if the input file exists
 if [ ! -f "$input_file" ]; then
-  echo "Error: $input_file does not exist"
+  printf "${RED}Error: $input_file does not exist${NC}\n"
   exit 3
 fi
 
 # check if input file is empty
 if [ ! -s "$input_file" ]; then
-  echo "Error: $input_file is empty"
+  printf "${RED}Error: $input_file is empty${NC}\n"
   exit 4
 fi
 
@@ -54,7 +67,7 @@ while read line || [ -n "$line" ]; do
   fi
 done <$input_file
 
-# Remove all files or directories from the base directory, where the names are not contained in the input file
+# remove all files or directories from the base directory, where the names are not contained in the input file
 for file in $base_dir/*; do
   if [ ! -d $file ]; then
     continue
@@ -73,8 +86,9 @@ for file in $base_dir/*; do
     echo "Do you want to continue? (y/n)"
     read answer
   fi
-  if [ "$answer" == "y" ]; then
+  if [ "$answer" == "y" ] || [ "$answer" == "Y" ] || [ "$answer" == "yes" ] || [ "$answer" == "Yes" ]; then
     rm -rf $file
     echo "Removing $dir_name..."
   fi
+  printf "${GREEN}Info: Successfully removed directories${NC}\n"
 done
