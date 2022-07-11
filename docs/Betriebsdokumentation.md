@@ -17,3 +17,9 @@ Er installiert Git und macht dabei die Scripte funktionstüchtig.
 ### Script 1
 
 ### Script 2
+Das Script musss mit zwei Parameter ausgeführt werden. 
+Beide Parameter müssen pfade zu Directories sein.
+```
+./git_extract_commits.bash SourceDirectory TargetDirectory
+```
+
