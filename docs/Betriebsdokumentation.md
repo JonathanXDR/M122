@@ -14,6 +14,6 @@ Er installiert Git und macht dabei die Scripte funktionstüchtig.
 
 ## Bediensanleitung Benutzer
 
-Script 1
+### Script 1
 
-Script 2
+### Script 2
