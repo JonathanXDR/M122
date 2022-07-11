@@ -14,11 +14,6 @@ Er installiert Git und macht dabei die Scripte funktionstüchtig.
 
 ## Bediensanleitung Benutzer
 
-TODO: Erzeugen der Input-Files beschreiben, falls noetig
+Script 1
 
-TODO: beschreiben des Scriptaufruf
-
-TODO: beschreiben der erzeugt files (falls solche erzeugt werden)
-
-TODO: Lokation von logfiles und bekannte Fehlermeldungen beschreiben.
-
+Script 2
