@@ -1,6 +1,8 @@
 #!/bin/bash
 
-echo -e "\n"
+bold=$(tput bold)
+
+echo -e "${bold}\n"
 echo "------------------------------"
 echo "####### Script started #######"
 echo "------------------------------"
@@ -44,10 +46,14 @@ if [ ! -d "$outputFile" ]; then
   exit 1
 fi
 
+Green='\033[1;32m'
+PURPLE='\033[0;35m'
+
+
 # Add headline to output-file
 echo "Zielverzeichnis,Datum,Commit-Hash,Author" >"${cwd}/${outputFile}/OutputFile$$.csv"
 
-echo "Repo Directorys:"
+printf "${Green}Repo Directorys: \n"
 
 # Go trough each element in directory
 for f in $twd/*; do
@@ -67,10 +73,11 @@ for f in $twd/*; do
       fi
 
     else
-
+      # Add directory to non-repo file
       echo "${f#$twd/}" >>"/tmp/nonrepolist.$$"
     fi
 
+    # Move back to source directory
     cd "$cwd"
   fi
 
@@ -78,8 +85,9 @@ done
 
 echo -e "\n"
 
+# Output all non repo Directories
 if [ -f /tmp/nonrepolist.$$ ]; then
-  echo "Non Repo Directorys:"
+  printf "${PURPLE}Non Repo Directorys:"
   cat /tmp/nonrepolist.$$
 fi
 echo -e "\n \n"
