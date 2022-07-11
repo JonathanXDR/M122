@@ -13,12 +13,7 @@ sudo apt install git
 Er installiert Git und macht dabei die Scripte funktionstüchtig.
 
 ### Konfiguration
-
-TODO: Beschreibung der Konfigurationsfiles (Beispiel-Files erstellen im Repo)
-
-TODO: Wie ist ein allfaelliger Cronjob einzurichten
-
-TODO: Wie sind User-Home-Templates einzurichten
+-- Keine -- 
 
 ....
 
