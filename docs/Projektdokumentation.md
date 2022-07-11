@@ -29,10 +29,10 @@ Dabei wird git heruntergeladen. Es wird benötigt um die Commit Messages auszule
 
 ### Parameter
 
-####Parameter 1:
+#### Parameter 1:
 Es muss angegeben welches Directory nach repos durchsucht werden soll. Dabei kann einfach der Pfad zu dem Directroy angegeben werden.
 
-####Parameter 2:
+#### Parameter 2:
 Es muss angegeben werden in welches Directory die Output CSV Dateien gespeichert werden sollen.
 
 ## Ablauf
