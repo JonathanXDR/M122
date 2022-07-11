@@ -27,6 +27,6 @@ Input file nach diesem Schema:
 Das Script musss mit zwei Parameter ausgeführt werden. 
 Beide Parameter müssen pfade zu Directories sein.
 ```
-./git_extract_commits.bash SourceDirectory TargetDirectory
+./git_extract_commits.bash ``<SourceDirectory> <TargetDirectory>``
 ```
 
