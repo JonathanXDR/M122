@@ -23,12 +23,12 @@ Er installiert Git und macht dabei die Scripte funktionstüchtig.
 Input file nach diesem Schema:
 `<GIT-Url> <Verzeichnisname>`
 
-Das Skript musss mit zwei Parametern ausgeführt werden.
+Das Skript muss mit zwei Parametern ausgeführt werden.
 `git_clone_update_repos.bash <input file> <target directory>`
 
 ### Script 2
 
-Das Skript musss mit zwei Parametern ausgeführt werden.
+Das Skript muss mit zwei Parametern ausgeführt werden.
 Beide Parameter müssen pfade zu Directories sein.
 
 `./git_extract_commits.bash <SourceDirectory> <TargetDirectory>`
