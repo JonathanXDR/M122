@@ -19,12 +19,27 @@ TODO: schreiben sie wie die Skripte aufgerufen werden sollen (d.h. welche Parame
 #### Skript 2: [git_extract_commits.bash](../bin/Script_2/git_extract_commits.bash)
 
 ![Script 2](../images/script2_solution_design.drawio.png)
-TODO: Hier kommt ihr UML-Activity Diagramm
 
-### Konfigurationsdateien
+### Vorbereitungen
+Damit das Programm funktionieren kann muss folgender Befehl ausgeführt werden:
+```
+sodo apt install git
+```
+Dabei wird git heruntergeladen. Es wird benötigt um die Commit Messages auszulesen.
 
-TODO: Definieren sie welche Parameter in welchen Konfigurationsdateien gespeichert werden.
+### Parameter
 
-## Abgrenzungen zum Lösungsdesign
+####Parameter 1:
+Es muss angegeben welches Directory nach repos durchsucht werden soll. Dabei kann einfach der Pfad zu dem Directroy angegeben werden.
 
-TODO: Nachdem das Programm verwirklicht wurde hier die unterschiede von der Implemenatino zum Lösungsdesign beschreiben (was wurde anders gemacht, was wurde nicht gemacht, was wurde zusaetzlich gemacht)
+####Parameter 2:
+Es muss angegeben werden in welches Directory die Output CSV Dateien gespeichert werden sollen.
+
+## Ablauf
+Das angegebene Directory wird auf Git Repositories durchsucht. Diese werden im Terminal angzeigt.
+
+Ebenfalls werden die "Nicht-Repo" Directories angezeigt.
+
+Von den Repositories werden dan jeweils die Logs ausgelesen und formatiert in einem CSV File gespeichert. 
+
+
