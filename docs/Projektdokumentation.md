@@ -31,12 +31,12 @@ Damit das Programm funktionieren kann muss folgender Befehl ausgeführt werden:
 ```
 sodo apt install git
 ```
-Dabei wird git heruntergeladen. Es wird benötigt um die Commit Messages auszulesen.
+Dabei wird git heruntergeladen. Es wird benötigt um die Logs auszulesen.
 
 ## Parameter
 
 ### Parameter 1 (Path):
-Es muss angegeben welches Directory nach repos durchsucht werden soll. Dabei kann einfach der Pfad zu dem Directroy angegeben werden.
+Es muss angegeben welches Directory nach Repositiories durchsucht werden soll. Dabei kann einfach der Pfad zu dem Directroy angegeben werden.
 
 ### Parameter 2 (Path):
 Es muss angegeben werden in welches Directory die Output CSV Dateien gespeichert werden sollen.
@@ -45,9 +45,9 @@ Es muss angegeben werden in welches Directory die Output CSV Dateien gespeichert
 Bei falschen oder fehlenden Parametern wird eine spezifische Fehlermeldung angezeigt. So kann man den fehler schnell erkennen und beheben. Das Script führt keine befehle aus, bevor nicht alle Parameter korrekt sind.
 
 ## Ablauf
-Das angegebene Directory wird auf Git Repositories durchsucht. Diese werden im Terminal angzeigt.
+Das angegebene Directory wird auf Git-Repositories durchsucht. Diese werden im Terminal angzeigt.
 
-Ebenfalls werden die "Nicht-Repo" Directories angezeigt.
+Ebenfalls werden die Nicht-Repo-Directories angezeigt.
 
 Von den Repositories werden dan jeweils die Logs ausgelesen und formatiert in einem CSV File gespeichert. 
 
