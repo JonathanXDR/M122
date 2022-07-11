@@ -48,4 +48,12 @@ Ebenfalls werden die "Nicht-Repo" Directories angezeigt.
 
 Von den Repositories werden dan jeweils die Logs ausgelesen und formatiert in einem CSV File gespeichert. 
 
+## Terminal Output
+Im Terminal werden sämtliche Fehlermeldungen angezeigt. Anhand der Fehlermeldungen kann erkennt werden was falsch gelaufen ist.
+
+Ebenfalls werden die Repositories und die nicht-Repositories angezeigt. Jeweils in einer anderen Farbe.
+
+## File Output (CSV)
+Die Logs der Repositories werden im angegebenen Directory in einer CSV Datei gespeichert. Der Separator ist ein ','. 
+Zu dem Namen des Files wird jeweils eine unique ID hinzugefpgt, um doppelte Files zu vermeiden.
 
