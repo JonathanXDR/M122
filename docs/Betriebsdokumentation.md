@@ -24,3 +24,9 @@ Input file nach diesem Schema:
 `<GIT-Url> <Verzeichnisname>`
 
 ### Script 2
+Das Script musss mit zwei Parameter ausgeführt werden. 
+Beide Parameter müssen pfade zu Directories sein.
+```
+./git_extract_commits.bash SourceDirectory TargetDirectory
+```
+
