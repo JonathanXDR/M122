@@ -12,4 +12,9 @@
 
 | Testfall           | Testbeschreibung                                                                                                                                                | Testdaten                                                                                 | erwartetes Testresultat                                                                                          | erhaltenes Testresultat | Tester | Testdatum und Teststatus |
 | ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------- | ----------------------- | ------ | ------------------------ |
-| Erstmaliger Aufruf | Das Skript soll mit einem Verzeichnis als parameter augerufen werden in welchem 2 Repos sind:<pre> git_extract_commits.bash /tmp/myrepos /tmp/commits.csv</pre> | Verzeichnis mit den GIT-Repos die mit dem Skript 1 geklont wurden:<pre>/tmp/myrepos</pre> | Alle Repos aus /tmp/myrepos werden gelesen und ein File /tmp/commits.csv erstellt mit allen Commits beider Repos |                         |        |                          |
+| Erstmahliges Ausführen | Das Script wird das erste mal ausgeführt. | Beide Parameter müssen korrekt sein | Für den Fall das Git nicht installiert ist, sollte eine Nachricht angezeigt werden, die den fehler erklärt. | Das Script lauft einwandfrei | Jonathan Russ | 11.07.2022 |
+| Ausführen ohne Parameter |  |  |  |  |  |  |
+| Ausführen mit nur 1. Parameter |  |  |  |  |  |  |
+| Ausführen mit nur 2. Parameter |  |  |  |  |  |  |
+| Ausführen mit falschen Parameter |  |  |  |  |  |  |
+
