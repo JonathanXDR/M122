@@ -87,7 +87,7 @@ echo -e "\n"
 
 # Output all non repo Directories
 if [ -f /tmp/nonrepolist.$$ ]; then
-  printf "${PURPLE}Non Repo Directorys:"
+  printf "${PURPLE}Non Repo Directorys:\n"
   cat /tmp/nonrepolist.$$
 fi
 echo -e "\n \n"
