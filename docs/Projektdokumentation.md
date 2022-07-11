@@ -1,7 +1,5 @@
 # Projekt Dokumentation
 
-[[_TOC_]]
-
 ## Lösungsdesign
 
 Anhand der Analyse wurde folgendes Lösungsdesign entworfen.
@@ -41,6 +39,14 @@ Es muss der Pfad zum input file oder mindestens der Name angegeben werden. Falls
 Bei falschen oder fehlenden Parametern wird eine Fehlermeldung und die Benutzung der Parameter ausgegeben.
 
 ## Ablauf
+
+Es werden beim Ausführen des Skripts das input file und das Zielverzeichnis festgelegt und gespeichert. Sollte es Fehler dabei geben, werden diese natürlich ausgegeben.
+
+Falls das Zielverzeichnis noch nicht existiert, wird nachgefraft und allenfalls erstellt.
+
+Danach wird überprüft, ob die Repos im input file schon im Zielverzeichnis existieren und werden, wenn nicht geklont. Andernfalls werden sie auf den neusten Stand gepullt.
+
+Zum Schluss wird noch geschaut, ob es Verzeichnisse gibt, die nicht im input file vorkommen. Falls ja, wird nachgefragt und sie werden andernfalls gelöscht.
 
 # Skript 2: [git_extract_commits.bash](../bin/Script_2/git_extract_commits.bash)
 

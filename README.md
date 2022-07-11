@@ -1,7 +1,5 @@
 # Projektarbeit LB2
 
-[[_TOC_]]
-
 # Einleitung
 
 Ihr Lehrer hat die Aufgabe, immer wieder GIT-Repos aller Schüler, bzw. aller Teams anzuschauen.
