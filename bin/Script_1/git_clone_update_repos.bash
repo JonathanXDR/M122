@@ -32,7 +32,7 @@ if [ ! -d "$base_dir" ]; then
   read create_dir
   if [ "$create_dir" == "y" ] || [ "$create_dir" == "Y" ] || [ "$create_dir" == "yes" ] || [ "$create_dir" == "Yes" ]; then
     mkdir -p $base_dir
-    printf "${GREEN}Directory successfully created${NC}\n"
+    printf "${GREEN}Info: Successfully created directory${NC}\n"
   else
     exit 1
   fi
@@ -90,5 +90,5 @@ for file in $base_dir/*; do
     rm -rf $file
     echo "Removing $dir_name..."
   fi
-  printf "${GREEN}Successfully removed directory${NC}\n"
+  printf "${GREEN}Info: Successfully removed directories${NC}\n"
 done
