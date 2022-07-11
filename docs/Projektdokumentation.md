@@ -41,6 +41,9 @@ Es muss angegeben welches Directory nach repos durchsucht werden soll. Dabei kan
 ### Parameter 2 (Path):
 Es muss angegeben werden in welches Directory die Output CSV Dateien gespeichert werden sollen.
 
+### Fehlerhafte Parameter
+Bei falschen oder fehlenden Parametern wird eine spezifische Fehlermeldung angezeigt. So kann man den fehler schnell erkennen und beheben. Das Script führt keine befehle aus, bevor nicht alle Parameter korrekt sind.
+
 ## Ablauf
 Das angegebene Directory wird auf Git Repositories durchsucht. Diese werden im Terminal angzeigt.
 
@@ -55,5 +58,6 @@ Ebenfalls werden die Repositories und die nicht-Repositories angezeigt. Jeweils 
 
 ## File Output (CSV)
 Die Logs der Repositories werden im angegebenen Directory in einer CSV Datei gespeichert. Der Separator ist ein ','. 
-Zu dem Namen des Files wird jeweils eine unique ID hinzugefpgt, um doppelte Files zu vermeiden.
+Zu dem Namen des Files wird jeweils eine unique ID hinzugefügt, um doppelte Files zu vermeiden.
+
 
