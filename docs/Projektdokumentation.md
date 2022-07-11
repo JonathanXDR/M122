@@ -1,17 +1,5 @@
 # Projekt Dokumentation
 
-[[_TOC_]]
-
-## Lösungsdesign
-
-Anhand der Analyse wurde folgendes Lösungsdesign entworfen.
-
-### Aufruf der Skripte
-
-TODO: schreiben sie wie die Skripte aufgerufen werden sollen (d.h. welche Parameter werden übergeben, gibt es Interaktionen mit dem Skript, läuft es automatisch täglich ab?)
-
-### Ablauf der Automation
-
 # Skript 1: [git_clone_update_repos.bash](../bin/Script_1/git_clone_update_repos.bash)
 
 ![Script 1](../images/script1_solution_design.drawio.png)
